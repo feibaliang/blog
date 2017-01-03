@@ -7,7 +7,7 @@
 // **Debug tip:** If you have any problems with any Grunt tasks, try running them with the `--verbose` command
 
 // jshint unused: false
-var overrides      = require('./core/server/overrides'),
+var
     _              = require('lodash'),
     chalk          = require('chalk'),
     fs             = require('fs-extra'),
@@ -329,7 +329,7 @@ var overrides      = require('./core/server/overrides'),
                 },
 
                 watch: {
-                    'core/client': ['bgShell:ember', 'watch']
+                    // 'core/client': ['bgShell:ember', 'watch']
                 },
 
                 lint: {

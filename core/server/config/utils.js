@@ -1,6 +1,5 @@
 var path = require('path'),
-    _ = require('lodash'),
-    errors = require('../errors');
+    _ = require('lodash');
 
 exports.isPrivacyDisabled = function isPrivacyDisabled(privacyFlag) {
     if (!this.get('privacy')) {
