@@ -10,7 +10,7 @@ function readDirectory(dir, options) {
         options = {};
     }
 
-    ignore = options.ignore || {};
+    ignore = options.ignore || [];
     ignore.push('node_modules', 'bower_components', '.DS_Store', '.git');
 
     return readDir(dir).filter(function (filename) {
@@ -30,7 +30,7 @@ function readDirectory(dir, options) {
     }).map(function (item) {
         if(item.stat.isDirectory()){
             return readDirectory(item.path).then(function (files) {
-                item.content = filles;
+                item.content = files;
                 return item;
             })
         }

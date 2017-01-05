@@ -3,7 +3,7 @@
 var ghost = require('./core'),
     debug = require('debug')('blog:boot:index'),
     express = require('express'),
-    logging = require('bunyan'),
+    logging = require('./core/server/logging'),
     parentApp = express();
 
 debug('Initialising Ghost');
@@ -13,7 +13,7 @@ ghost().then(function (ghostServer) {
     // Let Ghost handle starting our server instance.
     return ghostServer.start(parentApp);
 }).catch(function (error) {
-    console.error(err.stack);
+    console.error(error.stack);
     logging.error(error);
     process.exit(-1);
 });

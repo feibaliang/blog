@@ -1,6 +1,6 @@
 var readDirtory = require('./read-directory'),
     Promise = require('bluebird'),
-    join = require('path'),
+    join = require('path').join,
     fs = require('fs'),
 
     statFile = Promise.promisify(fs.stat);

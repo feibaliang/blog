@@ -9,3 +9,5 @@ themes = {
         });
     }
 };
+
+module.exports = themes;
